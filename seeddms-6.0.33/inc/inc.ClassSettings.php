@@ -28,9 +28,9 @@ class Settings { /* {{{ */
 	// Fields not shown in gui
 	var $_hiddenConfFields = '';
 	// Name of site
-	var $_siteName = "SeedDMS";
+       var $_siteName = "SolutionDMS";
 	// Message to display at the bottom of every page.
-	var $_footNote = "SeedDMS free document management \"system - www.seeddms.org";
+       var $_footNote = "SolutionDMS free document management \"system - www.seeddms.org";
 	// if true the disclaimer message the lang.inc files will be print on the bottom of the page
 	var $_printDisclaimer = true;
 	// Default page on login
