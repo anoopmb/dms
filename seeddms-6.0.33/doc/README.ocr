@@ -1,7 +1,7 @@
 OCR
 ====
 
-SeedDMS itself has no support for optical character recognition (OCR)
+SolutionDMS itself has no support for optical character recognition (OCR)
 because it does not care about the content of file. Though, external
 OCR software can be used to convert an image into text and index it
 by the full text search engine.

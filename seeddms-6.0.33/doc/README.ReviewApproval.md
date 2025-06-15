@@ -22,7 +22,7 @@ review.
 If a group is in charge for reviewing/approving a document, it will be
 sufficient if one member of that group takes action.
 
-Internally SeedDMS keeps a record of all approval/review actions done on
+Internally SolutionDMS keeps a record of all approval/review actions done on
 a document version. When a document version is uploaded with both processes
 in place, then for each user/group a list of log entries is created. Any
 action on the document will add a new entry to the log. Those entries

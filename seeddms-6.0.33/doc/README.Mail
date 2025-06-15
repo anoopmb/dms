@@ -1,19 +1,19 @@
 Mail configuration
 ===================
 
-SeedDMS uses email to 
+SolutionDMS uses email to 
 
 * notify users about changes of documents and folders
 * send instructions during the password forgotten process
 
-Configuring email in SeedDMS is simple on systems running a
-local mail server, because this is the default in SeedDMS and
+Configuring email in SolutionDMS is simple on systems running a
+local mail server, because this is the default in SolutionDMS and
 no additional configuration is needed. On Linux you should
 consider running a local mail server, which relais the mails
 to your outgoing mail server. If you cannot run a local mail
-server, you can still configure SeedDMS to use an outgoing
+server, you can still configure SolutionDMS to use an outgoing
 SMTP server. Below are some examples on how to configure
-SeedDMS for different hosters.
+SolutionDMS for different hosters.
 
 1&1
 ---------

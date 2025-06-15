@@ -1,7 +1,7 @@
 Layout of installation
 =======================
 
-SeedDMS allows various kinds of installations with very individual layouts
+SolutionDMS allows various kinds of installations with very individual layouts
 on disc. The proposed layout till version 5.1.6 was as the following:
 
 seeddms51x ---+--- data
@@ -15,8 +15,8 @@ seeddms51x ---+--- data
 'data' contains all document files, the sqlite database (if used), the full text
 data, the log files, and the cached preview images.
 
-'pear' contains all PEAR packages including the four SeedDMS packages SeedDMS_Core,
-SeedDMS_Lucene, SeedDMS_Preview, SeedDMS_SQLiteFTS.
+'pear' contains all PEAR packages including the four SolutionDMS packages SolutionDMS_Core,
+SolutionDMS_Lucene, SolutionDMS_Preview, SolutionDMS_SQLiteFTS.
 
 'seeddms-5.1.x' are the sources of seeddms and 'www' being a link on it.
 
