@@ -228,7 +228,7 @@ foreach($users as $user) {
 		$bodyhead .= getMLText('docsNeedToCareAbout', array('days'=>$days))."\n";
 		$bodyhead .= "\n";
 
-		$bodyhtmlhead = "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<title>SeedDMS: ".getMLText('daylyDigestMail')."</title>\n<base href=\"".$baseurl.$settings->_httpRoot."\" />\n</head>\n<body>\n";
+               $bodyhtmlhead = "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<title>SolutionDMS: ".getMLText('daylyDigestMail')."</title>\n<base href=\"".$baseurl.$settings->_httpRoot."\" />\n</head>\n<body>\n";
 		$bodyhtmlhead .= "<h2>";
 		$bodyhtmlhead .= getMLText('docsNeedToCareAbout', array('days'=>$days))."\n";
 		$bodyhtmlhead .= "</h2>\n";

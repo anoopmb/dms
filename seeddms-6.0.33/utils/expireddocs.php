@@ -173,7 +173,7 @@ foreach($users as $user) {
 		$groupids[] = $group->getID();
 	$sendmail = false; /* Set to true if there is something to report */
 	$body = "";
-	$bodyhtml = "<html>".PHP_EOL."<head>".PHP_EOL."<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />".PHP_EOL."<title>SeedDMS: ".getMLText('daylyDigestMail', array(), "", $user->getLanguage())."</title>".PHP_EOL."<base href=\"".$baseurl.$settings->_httpRoot."\" />".PHP_EOL."</head>".PHP_EOL."<body>".PHP_EOL."";
+       $bodyhtml = "<html>".PHP_EOL."<head>".PHP_EOL."<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />".PHP_EOL."<title>SolutionDMS: ".getMLText('daylyDigestMail', array(), "", $user->getLanguage())."</title>".PHP_EOL."<base href=\"".$baseurl.$settings->_httpRoot."\" />".PHP_EOL."</head>".PHP_EOL."<body>".PHP_EOL."";
 
 	/*
 	$queryStr = "SELECT `tblDocuments`.* FROM `tblDocuments`".

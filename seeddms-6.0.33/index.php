@@ -95,7 +95,7 @@ if(true) {
 ?>
 <html>
 <head>
-	<title>SeedDMS</title>
+       <title>SolutionDMS</title>
 </head>
 
 <body>
