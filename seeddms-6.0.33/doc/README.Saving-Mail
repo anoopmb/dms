@@ -1,12 +1,12 @@
-# Saving mail straight into SeedDMS
+# Saving mail straight into SolutionDMS
 
-Saving mail into SeedDMS is best done by using the message/rfc822 format
+Saving mail into SolutionDMS is best done by using the message/rfc822 format
 (often called .eml file), because it keeps the whole mail unmodified
 in one file.
 
 For mutt users the following script might be helpful as it takes an
 exiting mail and saves it to a file into a given directory. This file
-can than be uploaded to SeedDMS.
+can than be uploaded to SolutionDMS.
 
 ## Add an entry in your .muttrc
 

@@ -7,7 +7,7 @@ The authentication is done with the user `admin`. You may use any other
 user as well.
 
 You may as well pass `-H Authorization: <api key>` instead of `-b cookies.txt`
-to `curl` after setting the api key in the configuration of your SeedDMS.
+to `curl` after setting the api key in the configuration of your SolutionDMS.
 Of course, in that case you will not need the initial call of the `login`
 endpoint.
 

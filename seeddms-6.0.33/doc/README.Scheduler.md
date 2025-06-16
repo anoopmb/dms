@@ -1,17 +1,17 @@
 Scheduler
 ==========
 
-The scheduler in SeedDMS manages frequently run tasks. It is very similar
-to regular unix cron jobs. A task in SeedDMS is an instanciation of a task
-class which itself is defined by an extension or SeedDMS itself.
-SeedDMS has some predefined classes e.g. core::expireddocs.
+The scheduler in SolutionDMS manages frequently run tasks. It is very similar
+to regular unix cron jobs. A task in SolutionDMS is an instanciation of a task
+class which itself is defined by an extension or SolutionDMS itself.
+SolutionDMS has some predefined classes e.g. core::expireddocs.
 
 In order for tasks to be runnalbe, a user `cli_scheduler` must exists in
-SeedDMS.
+SolutionDMS.
 
 All tasks are executed by a single cronjob in the directory `utils`
 
-> */5 * * * * /home/www-data/seeddms60x/seeddms/utils/seeddms-schedulercli --mode=run
+> */5 * * * * /home/www-data/solutiondms/seeddms/utils/seeddms-schedulercli --mode=run
 
 Please keep in mind, that the php interpreter used for the cronjob may be
 different from the php interpreter used für the web application. Hence, two

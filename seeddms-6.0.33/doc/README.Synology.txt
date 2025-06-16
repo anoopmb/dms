@@ -1,16 +1,16 @@
 *********************************************
-How to set up a Synology NAS to run SeedDMS
+How to set up a Synology NAS to run SolutionDMS
 *********************************************
 
 **This guide has been updated and tested to work on Synology DSM 6.0. It should as well work with older DMS versions, however some steps or paths may be different.**
 
 Introduction
 ############
-SeedDMS is a feature rich and lightweight document management system. Unfortunately, some of the tools which are part of many Linux distros, have not been made available by
+SolutionDMS is a feature rich and lightweight document management system. Unfortunately, some of the tools which are part of many Linux distros, have not been made available by
 Synology and therefore require additional steps to bring them to your Synology.
 
-This guide covers the installation of the required tools to have all features of SeedDMS available. It does not cover the installation of 3rd party programs (like OPKG). It
-does not cover the installation of SeedDMS as well, please refer to the separate README.Install.md file.
+This guide covers the installation of the required tools to have all features of SolutionDMS available. It does not cover the installation of 3rd party programs (like OPKG). It
+does not cover the installation of SolutionDMS as well, please refer to the separate README.Install.md file.
 
 Prerequisites
 #############
@@ -90,14 +90,14 @@ If you want to test Ghostcript as well, invoke the follwing command:
 
 This command should go through without any errors and as well output a png file.
 
-If the tests above are successful, you are ready to use SeedDMS Preview.
+If the tests above are successful, you are ready to use SolutionDMS Preview.
 
 Install PEAR packages
 *********************
 
 This step is similar to the installation on other Linux distros. Once you installed PEAR from the Package Center you can call it from the command line.
 
-The following packages are required by SeedDMS:
+The following packages are required by SolutionDMS:
 
 * Auth_SASL
 * HTTP_WebDAV_Server
@@ -110,7 +110,7 @@ Install these packages, then go to the next step.
 Install additional packages
 ***************************
 
-SeedDMS uses other small tools (for example the Slim Framework) to add some additional functionality. At the moment (Version 5.0.x) the list contains the following
+SolutionDMS uses other small tools (for example the Slim Framework) to add some additional functionality. At the moment (Version 5.0.x) the list contains the following
 tools:
 
 * FeedWriter
@@ -125,9 +125,9 @@ Fulltext Index
 ***************
 
 If you do not intend to use the fulltext index, please skip this section and continue with the readme file to
-install SeedDMS.
+install SolutionDMS.
 
-To create the fulltext index, SeedDMS needs to be able to convert the documents to text files to read the terms
+To create the fulltext index, SolutionDMS needs to be able to convert the documents to text files to read the terms
 out. Pdftotext is already available by default, so we just need to take care of the Microsoft Office formats.
 
 For this guide, the following two tools have been selected:
@@ -142,11 +142,11 @@ Copy both files to your Synology.
 
 This program runs without any kind of installation. Create a folder on your Synology and extract the contents of the archive.
 
-In SeedDMS you can now configure the setting for Word documents to the path where you extracted the files in the step before. Point
+In SolutionDMS you can now configure the setting for Word documents to the path where you extracted the files in the step before. Point
 to the docx2txt.sh file and you are done.
 
 To make the configuration more simple you can add a symlink in **/usr/bin**. This will allow you to call docx2txt from any location of your Synology.
-The symlink must point to docx2txt.sh to get it working. In SeedDMS you can now just configure docx2txt followed by any additional commands.
+The symlink must point to docx2txt.sh to get it working. In SolutionDMS you can now just configure docx2txt followed by any additional commands.
 
 **xlsx2csv**
 
@@ -155,9 +155,9 @@ As the version available from Synology does not properly work (you can't install
 
 Install Python and PIP. Once completed, point to the directory where you copied xlsx2csv. Unpack the archive, then execute the installer (pip install xlsx2csv).
 
-Once completed, xlsx2csv is available and can be configured within SeedDMS.
+Once completed, xlsx2csv is available and can be configured within SolutionDMS.
 
 Complete the installation
 *************************
 
-Now you are ready to install SeedDMS and configure the database. Follow the README file to install SeedDMS.
+Now you are ready to install SolutionDMS and configure the database. Follow the README file to install SolutionDMS.
