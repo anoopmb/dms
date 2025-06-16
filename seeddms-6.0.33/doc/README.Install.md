@@ -1,14 +1,14 @@
-SeedDMS Installation Instructions
+SolutionDMS Installation Instructions
 ==================================
 
 REQUIREMENTS
 ============
 
-SeedDMS is a web-based application written in PHP. It uses MySQL,
+SolutionDMS is a web-based application written in PHP. It uses MySQL,
 SQLite3 or PostgreSQL to manage the documents that were uploaded into
 the application. Be aware that PostgreSQL is not very well tested.
 
-Make sure you have PHP >= 8.2 and MySQL 5 or higher installed. SeedDMS
+Make sure you have PHP >= 8.2 and MySQL 5 or higher installed. SolutionDMS
 will work with PHP running in CGI-mode as well as running as a module under
 apache.
 
@@ -29,19 +29,19 @@ Here is a detailed list of requirements:
 
 It is highly recommended to use the quickstart archive
 (seeddms-quickstart-x.y.z.tar.gz) because it includes all software packages
-(excluding those listed above in item 1. to 6.) for running SeedDMS. Hence,
+(excluding those listed above in item 1. to 6.) for running SolutionDMS. Hence,
 you still need a working web server with PHP and in addition a mysql or
 PostgreSQL database unless you intend to use SQLite.
 
 QUICKSTART
 ===========
 
-The fastes way to get SeedDMS running is by unpacking the archive
+The fastes way to get SolutionDMS running is by unpacking the archive
 `seeddms-quickstart-x.y.z.tar.gz` on your webserver.
 Let's assume you use seeddms-quickstart-5.1.x.tar.gz.
 It will create a new directory `seeddms51x` containing everything you
-need to run SeedDMS with SQLite3. Even if you intend to use mysql in the
-long run it is advisable to first set up SeedDMS with SQLite3 and than
+need to run SolutionDMS with SQLite3. Even if you intend to use mysql in the
+long run it is advisable to first set up SolutionDMS with SQLite3 and than
 just switch the database.
 
 Setting up the web server
@@ -72,7 +72,7 @@ Make sure that the subdirectory `seeddms51x/data` and the configuration file
 directories can be just readable by your web server, though it is advisable
 to even protect them from writing.
 
-Adjusting the configuration of SeedDMS
+Adjusting the configuration of SolutionDMS
 ---------------------------------------
 
 In the next step you need to adjust the configuration file in
@@ -97,9 +97,9 @@ http://your-domain/ or http://your-domain/seeddms51x.
 SECURITY CONSIDERATIONS
 =======================
 
-You should always access your SeedDMS installation through
+You should always access your SolutionDMS installation through
 a secured https connection, unless you precisly know what you are doing.
-SeedDMS ships an `.htaccess` file which already has some common security
+SolutionDMS ships an `.htaccess` file which already has some common security
 http headers set. In order for them to apply you need to activate the
 headers module. On Debian/GNU Linux this can be done with
 
@@ -110,13 +110,13 @@ a2enmod headers
 Protect directories with data or configuration
 ---------------------------------------------
 
-A crucial point when setting up SeedDMS is the propper placement of the
+A crucial point when setting up SolutionDMS is the propper placement of the
 data directory. Do not place it below your document root of your web server!
 If you do so, there is a potential way that
 attackers can easily access your documents with a regular web browser.
 If you cannot place the data directory outside of document root, then either
 restrict access to it with an appropriate `.htaccess` file like the following.
-The SeedDMS quickstart archive already includes this `.htaccess` file.
+The SolutionDMS quickstart archive already includes this `.htaccess` file.
 
 ```
 # line below if for Apache 2.4
@@ -147,23 +147,23 @@ Also turn off directory listings in your apache configuration for the
 Securing the configuration file
 ---------------------------------
 
-The configuration can be fully controlled by any administrator of SeedDMS. This
+The configuration can be fully controlled by any administrator of SolutionDMS. This
 can be crucial for those configuration options where external commands are
 being configured, e.g. for the full text engine or creating preview images.
-As a hoster you may not want this configuration options being set by a SeedDMS
+As a hoster you may not want this configuration options being set by a SolutionDMS
 administrator. For now you need to make the configuration file `settings.xml`
-unwritable for the web server. In that case the SeedDMS administrator can
+unwritable for the web server. In that case the SolutionDMS administrator can
 still see the configuration but will not be able to change it.
 
-Since version 5.1.23 and 6.0.16 of SeedDMS there is some preliminary way to
+Since version 5.1.23 and 6.0.16 of SolutionDMS there is some preliminary way to
 hide parts of the configuration which makes them unchangeable for the
-SeedDMS administrator.
+SolutionDMS administrator.
 
 Setting a new encryption key
 ------------------------------
 
 Though this is not related to setting up the web server environment, it is
-important to recreated the encryption key in SeedDMS once SeedDMS is running.
+important to recreated the encryption key in SolutionDMS once SolutionDMS is running.
 Just open the settings in the admin tools and empty the currently set
 encryption key on the tab 'System'. Save the settings and check the key again.
 It should be a new one. Save the settings again. The encryption key is
@@ -172,16 +172,16 @@ mainly used for creating tokens in HTML forms to prevent CSRF attacks.
 UPGRADING FROM A PREVIOUS VERSION OF SEEDDMS
 =============================================
 
-As SeedDMS is a smooth continuation of LetoDMS there is no difference
-in updating from LetoDMS or SeedDMS.
+As SolutionDMS is a smooth continuation of LetoDMS there is no difference
+in updating from LetoDMS or SolutionDMS.
 
-You have basically two choices to update SeedDMS:
+You have basically two choices to update SolutionDMS:
 
-- you install a fresh version of SeedDMS and copy over your data and configuration
+- you install a fresh version of SolutionDMS and copy over your data and configuration
 - you replace the software in your current installation with a new version
 
 The first option is less interuptive but requires to be able to set up a second
-temporary SeedDMS installation, which may not be possible, e.g. because of storage
+temporary SolutionDMS installation, which may not be possible, e.g. because of storage
 limitations. It can be the only option if you change servers.
 
 The first update procedure is only needed if the version changes on the minor
@@ -196,7 +196,7 @@ and database.
 Fresh installation and take over of data
 -----------------------------------------
 
-The first update option is to set up a new instance of SeedDMS and once
+The first update option is to set up a new instance of SolutionDMS and once
 that is running take over the data from your current (old) instance.
 
 1. just do a fresh installation somewhere on your web server and make sure it
@@ -221,7 +221,7 @@ that is running take over the data from your current (old) instance.
    connection.
 6. create a file `ENABLE_INSTALL_TOOL` in the `conf` directory and point
    your browser at http://hostname/seeddms/install
-   The install tool will detect the version of your current SeedDMS installation
+   The install tool will detect the version of your current SolutionDMS installation
    and run the required database updates.
    If you update just within the last version number (e.g. from 5.1.6 to 5.1.9),
    this step
@@ -234,7 +234,7 @@ Upgrading your current installation
 Instead of setting up a new installation, you may as well replace the php files
 in your current installation with new versions from the quickstart archive.
 
-1. get the SeedDMS quickstart archive `seeddms-quickstart-x.y.z.tar.gz` and
+1. get the SolutionDMS quickstart archive `seeddms-quickstart-x.y.z.tar.gz` and
    unpack it somewhere on your disc.
 2. copy the directory `seeddms-x.y.z` from the unpacked archive into your
    current installation and make the link `seeddms` point to this new directory.
@@ -246,7 +246,7 @@ in your current installation with new versions from the quickstart archive.
    time you save the configuration the default values will be used.
 5. create a file `ENABLE_INSTALL_TOOL` in the `conf` directory and point
    your browser at http://hostname/seeddms/install
-   The install tool will detect the version of your current SeedDMS installation
+   The install tool will detect the version of your current SolutionDMS installation
    and run the required database updates.
    If you update just within the last version number (e.g. from 5.1.6 to 5.1.9),
    this step
@@ -260,29 +260,29 @@ THE LONG STORY
 This section is mostly outdated but may still contain some valueable
 information for those trying to understand the installation process.
 
-If you intend to run a single instance of SeedDMS, you are most likely
+If you intend to run a single instance of SolutionDMS, you are most likely
 better off by using the quickstart archive as described above. This
 section is mostly for users who wants to know more about the internals
-of SeedDMS or do packaging for a software distribution, which already
-ships some of the additional software SeedDMS requires.
+of SolutionDMS or do packaging for a software distribution, which already
+ships some of the additional software SolutionDMS requires.
 
-SeedDMS has changed its installation process with version 3.0.0. This gives
-you many more options in how to install SeedDMS. First of all, SeedDMS was
-split into a core package (`SeedDMS_Core-<version>.tar.gz`) and the web
+SolutionDMS has changed its installation process with version 3.0.0. This gives
+you many more options in how to install SolutionDMS. First of all, SolutionDMS was
+split into a core package (`SolutionDMS_Core-<version>.tar.gz`) and the web
 application itself (`seeddms-<version>.tar.gz`). The core is a pear package
 which could be installed as one. It is responsible for all the database
 operations. The web application contains the ui not knowing anything about
-the database layout. Second, one SeedDMS installation can be used for
+the database layout. Second, one SolutionDMS installation can be used for
 various customer instances by sharing a common source. Starting with
 version 3.2.0 a full text search engine has been added. This requires
-the zend framework and another pear package `SeedDMS_Lucene-<version>.tar.gz`
-which can be downloaded from the SeedDMS web page. Version 4.0.0 show
-preview images of documents which requires `SeedDMS_Preview-<version>.tar.gz`.
-Finally, SeedDMS has
+the zend framework and another pear package `SolutionDMS_Lucene-<version>.tar.gz`
+which can be downloaded from the SolutionDMS web page. Version 4.0.0 show
+preview images of documents which requires `SolutionDMS_Preview-<version>.tar.gz`.
+Finally, SolutionDMS has
 got a web based installation, which takes care of most of the installation
 process.
 
-Before you proceed you have to decide how to install SeedDMS:
+Before you proceed you have to decide how to install SolutionDMS:
 1. with multiple instances
 2. as a single instance
 
@@ -299,7 +299,7 @@ on your web server.
 -------------------
 
 A common source of problems in the past have been the additional software
-packages needed by SeedDMS. Those are the PEAR packages `Log`, `Mail` and
+packages needed by SolutionDMS. Those are the PEAR packages `Log`, `Mail` and
 `HTTP_WebDAV_Server` as well as the `Zend_Framework`.
 If you have full access to the server running a Linux distribution it is
 recommended to install those with your package manager if they are provided
@@ -312,9 +312,9 @@ php.ini or adding a line like
 > php_value include_path '/home/mypath:.:/usr/share/php'
 
 to your apache configuration or setting the `extraPath` configuration
-variable of SeedDMS.
+variable of SolutionDMS.
 
-For historical reasons the path to the SeedDMS_Core and SeedDMS_Lucene package
+For historical reasons the path to the SolutionDMS_Core and SolutionDMS_Lucene package
 can still be set
 in the configuration, which is not recommend anymore. Just leave those
 parameters empty.
@@ -332,11 +332,11 @@ below 5.4.
 
 Unpack seeddms-<version>.tar.gz below the document root of
 your web server.
-Install `SeedDMS_Preview-<version>.tar.gz` and
-`SeedDMS_Core-<version>.tar.gz` either as a regular pear package or
+Install `SolutionDMS_Preview-<version>.tar.gz` and
+`SolutionDMS_Core-<version>.tar.gz` either as a regular pear package or
 set up a file system structure like pear did somewhere on you server.
 For the full text search engine support, you will also
-need to install `SeedDMS_Lucene-<version>.tar.gz`.
+need to install `SolutionDMS_Lucene-<version>.tar.gz`.
 
 For the following instructions we will assume a structure like above
 and seeddms-<version> being accessible through
@@ -363,29 +363,29 @@ http://localhost/seeddms/
 -------------------------------------------------------
 
 You need a working web server with MySQL/PHP5 support and the files
-`SeedDMS-<version>.tar.gz`, `SeedDMS_Preview-<version>.tar.gz` and
-`SeedDMS_Core-<version>.tgz`. For the 
+`SolutionDMS-<version>.tar.gz`, `SolutionDMS_Preview-<version>.tar.gz` and
+`SolutionDMS_Core-<version>.tgz`. For the 
 full text search engine support, you will also need to unpack
-`SeedDMS_Lucene-<version>.tgz`.
+`SolutionDMS_Lucene-<version>.tgz`.
 
 * Unpack all the files in a public web server folder. If you're working on
   a host machine your provider will tell you where to upload the files.
-  If possible, do not unpack the pear packages `SeedDMS_Core-<version>.tgz`,
-  `SeedDMS_Preview-<version>.tgz` and
-  `SeedDMS_Lucene-<version>.tgz` below the document root of your web server.
+  If possible, do not unpack the pear packages `SolutionDMS_Core-<version>.tgz`,
+  `SolutionDMS_Preview-<version>.tgz` and
+  `SolutionDMS_Lucene-<version>.tgz` below the document root of your web server.
   Choose a temporary folder, as the files will be moved in a second.
 
   Create a directory e.g. `pear` in the same directory where you unpacked
-  seeddms and create a sub directory SeedDMS. Move the content except for the
-  `tests` directory of all SeedDMS pear
-  packages into that directory. Please note that `pear/SeedDMS` may not 
+  seeddms and create a sub directory SolutionDMS. Move the content except for the
+  `tests` directory of all SolutionDMS pear
+  packages into that directory. Please note that `pear/SolutionDMS` may not 
   (and for security reasons should not) be below your document root.
   
   You will end up with a directory structure like the following
 
   > seeddms-<version>
   > pear
-  >   SeedDMS
+  >   SolutionDMS
   >     Core.php
   >     Core
   >     Lucene.php
@@ -395,9 +395,9 @@ full text search engine support, you will also need to unpack
 
   Since they are pear packages they can also be installed with
 
-  > pear install SeedDMS_Core-<version>.tgz
-  > pear install SeedDMS_Lucene-<version>.tgz
-  > pear install SeedDMS_Preview-<version>.tgz
+  > pear install SolutionDMS_Core-<version>.tgz
+  > pear install SolutionDMS_Lucene-<version>.tgz
+  > pear install SolutionDMS_Preview-<version>.tgz
 
 * The PEAR packages Log and Mail are also needed. They can be downloaded from
   http://pear.php.net/package/Log and http://pear.php.net/package/Mail.
@@ -441,7 +441,7 @@ following.
   > </Files>
 
 
-If you install SeedDMS for the first time continue with the database setup.
+If you install SolutionDMS for the first time continue with the database setup.
 
 * Create a new database on your web server
   e.g. for mysql:
@@ -486,22 +486,22 @@ change the Administrator's password and email-address.
 CONFIGURING MULTIPLE INSTANCES
 ==============================
 
-Since version 3.0.0, SeedDMS can be set up to run several parallel instances
+Since version 3.0.0, SolutionDMS can be set up to run several parallel instances
 sharing the same source but each instance has its own configuration. This is
-quite useful if you intend to host SeedDMS for several customers. This
-approach still allows to have diffenrent version of SeedDMS installed
+quite useful if you intend to host SolutionDMS for several customers. This
+approach still allows to have diffenrent version of SolutionDMS installed
 and will not force you to upgrade a customer instance, because other
 instances are upgraded. A customer instance consists of
-1. a directory containing mostly links to the SeedDMS source and a
+1. a directory containing mostly links to the SolutionDMS source and a
    configuration file
 2. a directory containing the document content files
 3. a database
 
-1. Unpack the SeedDMS distribution
+1. Unpack the SolutionDMS distribution
 ----------------------------------
 
 Actually there is no need to set up the database at this point but it won't
-hurt since you'll need one in the next step anyway. The sources of SeedDMS
+hurt since you'll need one in the next step anyway. The sources of SolutionDMS
 can be anywhere you like. The do not have to be in you www-root. If you just
 have access to your www-root directory, then put them there.
 
@@ -515,7 +515,7 @@ second case, you will not be able to create a second instance, because each
 instance needs its own directory.
 
 Go into that directory create the following links (<seeddms-source> is the
-directory of your initial SeedDMS intallation).
+directory of your initial SolutionDMS intallation).
 
 > src -> <seeddms-source>
 > inc -> src/inc
@@ -545,7 +545,7 @@ Create a new directory named conf and run the installation tool.
 
 Creating the links as above has the advantage that you can easily switch
 to a new version and go back if it is necessary. You could even run various
-instances of SeedDMS using different versions.
+instances of SolutionDMS using different versions.
 
 3. Create a database and data store for each instance
 -----------------------------------------------------
@@ -558,14 +558,14 @@ Point your web browser towards the index.php file in your new instance.
 NOTE FOR VERSION 4.0.0
 ======================
 
-Since version 4.0.0 of SeedDMS installation has been simplified. 
+Since version 4.0.0 of SolutionDMS installation has been simplified. 
 ADOdb is no longer needed because the database access is done by
 PDO.
 
 IMPORTANT NOTE ABOUT TRANSLATIONS
 =================================
 
-As you can see SeedDMS provides a lot of languages but we are not professional 
+As you can see SolutionDMS provides a lot of languages but we are not professional 
 translators and therefore rely on user contributions.
 
 If your language is not present in the login panel:
@@ -588,7 +588,7 @@ If there is no help in your language:
 - translate it
 
 If you apply any changes to the language files please send them to the
-SeedDMS developers <info@seeddms.org>.
+SolutionDMS developers <info@seeddms.org>.
 
 http://www.iana.org/assignments/language-subtag-registry has a list of
 all language and country codes.
@@ -596,6 +596,6 @@ all language and country codes.
 LICENSING
 =========
 
-SeedDMS is licensed unter GPLv2
+SolutionDMS is licensed unter GPLv2
 
 Uwe Steinmann <info@seeddms.org>

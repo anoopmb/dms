@@ -1,7 +1,7 @@
 This README was written by Eric Smith
 
 ======================================================
-Steps that I took to install SeedDMS on Ubuntu 12.10
+Steps that I took to install SolutionDMS on Ubuntu 12.10
 - a personal account and not an authoritative guide.
 ======================================================
 
@@ -9,14 +9,14 @@ Download four tar balls from;
 http://sourceforge.net/projects/seeddms/files/seeddms-4.0.0-pre5/
 
 seeddms-4.0.0-pre5.tar.gz
-SeedDMS_Preview-1.0.0.tgz
-SeedDMS_Lucene-1.1.1.tgz
-SeedDMS_Core-4.0.0pre5.tgz
+SolutionDMS_Preview-1.0.0.tgz
+SolutionDMS_Lucene-1.1.1.tgz
+SolutionDMS_Core-4.0.0pre5.tgz
 
 Install as follows the pear components:
-sudo pear install SeedDMS_Core-4.0.0pre5.tgz
-sudo pear install SeedDMS_Preview-1.0.0.tgz
-sudo pear install SeedDMS_Lucene-1.1.1.tgz
+sudo pear install SolutionDMS_Core-4.0.0pre5.tgz
+sudo pear install SolutionDMS_Preview-1.0.0.tgz
+sudo pear install SolutionDMS_Lucene-1.1.1.tgz
 
 Download and install the pear Log application:
 wget http://download.pear.php.net/package/Log-1.12.7.tgz
@@ -95,8 +95,8 @@ db from a remote browser;
 pepper:~> elinks www.mydomain.eu/seeddms_multisite_test/install
 
 This is how I filled it in;
-                                                            SeedDMS: INSTALL
-   SeedDMS Installation for version 4.0.0
+                                                            SolutionDMS: INSTALL
+   SolutionDMS Installation for version 4.0.0
 
    Server settings
    Root directory:                /opt/seeddms-4.0.0-pre5/_______________________
@@ -104,8 +104,8 @@ This is how I filled it in;
    Content directory:             /opt/dms/seeddms_multisite_test/data___________
    Directory for full text index: /opt/dms/seeddms_multisite_test/data/lucene/___
    Directory for partial uploads: /opt/dms/seeddms_multisite_test/data/staging/__
-   Core SeedDMS directory:        _______________________________________________
-   Lucene SeedDMS directory:      _______________________________________________
+   Core SolutionDMS directory:        _______________________________________________
+   Lucene SolutionDMS directory:      _______________________________________________
    Extra PHP include Path:        _______________________________________________
    Database settings
    Database Type:                 mysql________________

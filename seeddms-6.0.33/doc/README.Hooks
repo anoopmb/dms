@@ -3,10 +3,10 @@ Hooks
 
 Attention: the api for hooks isn't stable yet!
 
-Hooks in SeedDMS are user definied methods which are being called by
-the application. The SeedDMS Core also has hooks which are being
+Hooks in SolutionDMS are user definied methods which are being called by
+the application. The SolutionDMS Core also has hooks which are being
 called from the core itself. They are not subject of this document.
-The SeedDMS application distinguishes between
+The SolutionDMS application distinguishes between
 
 * view hooks and
 * controller hooks

@@ -1,5 +1,5 @@
-SeedDMS SQLiteFTS Fulltext Search
+SolutionDMS SQLiteFTS Fulltext Search
 =================================
 
-This used to be the SeedDMS_SQLiteFTS subdirectory in SeedDMS. It was moved into
+This used to be the SolutionDMS_SQLiteFTS subdirectory in SolutionDMS. It was moved into
 its own repository and turned into a composer package on 2023-01-21

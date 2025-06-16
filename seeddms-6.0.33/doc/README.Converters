@@ -110,7 +110,7 @@ text/plain
   iconv -c -f utf-8 -t latin1 '%f' | a2ps -1 -q -a1 -R -B -o - - | ps2pdf - -
 
 	The parameter `-q` is important because a2ps sends some statistical
-	data to stderr, which makes SeedDMS believe the command has failed.
+	data to stderr, which makes SolutionDMS believe the command has failed.
 
 application/x-xopp
 
@@ -132,7 +132,7 @@ It basically instructs you to comment out the line
 in /etc/ImageMagick-6/policy.xml
 
 convert determines the format of the converted image from the extension of
-the output filename. SeedDMS usually sets a propper extension when running
+the output filename. SolutionDMS usually sets a propper extension when running
 the command, but nevertheless it is good practice to explicitly set the output
 format by prefixing the output filename with 'png:'. This is of course always
 needed if the output goes to stdout.

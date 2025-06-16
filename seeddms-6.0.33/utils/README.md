@@ -13,7 +13,7 @@ any of them.
 Do not allow regular users to run this scripts!
 -----------------------------------------------
 
-None of the scripts do any authentication. They all run with a SeedDMS
+None of the scripts do any authentication. They all run with a SolutionDMS
 admin account! So anybody being allowed to run the scripts can modify
 your DMS content.
 
@@ -28,7 +28,7 @@ users.
 
 If you run `seeddms-adddoc` make sure to run it with the permissions
 of the user running your web server. It will copy files right into
-the content directory of your SeedDMS installation. Don't do this
+the content directory of your SolutionDMS installation. Don't do this
 as root because you will most likely not be able to remove those documents
 via the web gui. If this happens by accident, you will still be able
 to fix it manually by setting the propper file permissions for the document
